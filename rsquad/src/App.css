@@ -1,0 +1,192 @@
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  margin: 0 0 2rem 0;
+  opacity: 0.9;
+}
+
+.challenge-info {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.challenge-info p {
+  margin: 0.8rem 0;
+  font-size: 1.1rem;
+}
+
+.leaderboard {
+  margin-bottom: 3rem;
+}
+
+.leaderboard-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.leaderboard-header h2 {
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
+}
+
+.students-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.student-card {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 5px solid #ddd;
+}
+
+.student-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.student-card.rank-1 {
+  border-left-color: #ffd700;
+  background: linear-gradient(135deg, #fff9e6 0%, #ffffff 100%);
+}
+
+.student-card.rank-2 {
+  border-left-color: #c0c0c0;
+  background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
+}
+
+.student-card.rank-3 {
+  border-left-color: #cd7f32;
+  background: linear-gradient(135deg, #fff5e6 0%, #ffffff 100%);
+}
+
+.rank {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #666;
+  margin-right: 1.5rem;
+  min-width: 50px;
+}
+
+.rank-1 .rank {
+  color: #ffd700;
+  font-size: 2rem;
+}
+
+.rank-2 .rank {
+  color: #c0c0c0;
+  font-size: 1.8rem;
+}
+
+.rank-3 .rank {
+  color: #cd7f32;
+  font-size: 1.6rem;
+}
+
+.student-info {
+  flex: 1;
+}
+
+.student-info h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.points-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.points-label {
+  font-size: 0.9rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 15px;
+  margin-top: 2rem;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .student-card {
+    padding: 1rem;
+  }
+
+  .rank {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    min-width: 40px;
+  }
+
+  .student-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .points-number {
+    font-size: 1.5rem;
+  }
+}
