@@ -42,6 +42,10 @@ function App() {
             ✅ <strong>How to Earn Points:</strong> Bring the person you invited
             to a leader to claim your point!
           </p>
+          <p>
+            🏆 <strong>Winner Gets:</strong> The "Faithful Servant" trophy +
+            R*Squad merch!
+          </p>
         </div>
       </header>
 
