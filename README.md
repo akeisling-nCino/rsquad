@@ -1,2 +1,2 @@
 # rsquad
-Repo rsquad leaderboard
+rsquad leaderboard
