@@ -11,11 +11,26 @@ interface Student {
 
 function App() {
   const [students] = useState<Student[]>([
-    { id: 1, name: "John Smith", points: 5 },
-    { id: 2, name: "First Last", points: 3 },
-    { id: 3, name: "Test Name", points: 7 },
-    { id: 4, name: "Cool Guy", points: 2 },
-    { id: 5, name: "Another Name", points: 4 },
+    { id: 1, name: "Ivan Bogdin", points: 0 },
+    { id: 2, name: "Wesley Crews", points: 0 },
+    { id: 3, name: "Brycen Faircloth", points: 0 },
+    { id: 4, name: "Caleb Gorham", points: 0 },
+    { id: 5, name: "Camden Graham", points: 0 },
+    { id: 6, name: "Max Halagarda", points: 0 },
+    { id: 7, name: "Shea Harper", points: 0 },
+    { id: 8, name: "Harrison Holland", points: 0 },
+    { id: 9, name: "Jacob Jackson", points: 0 },
+    { id: 10, name: "James Justice", points: 0 },
+    { id: 11, name: "Nolan Kern", points: 0 },
+    { id: 12, name: "Noah Lucero", points: 0 },
+    { id: 13, name: "Brandt McGee", points: 0 },
+    { id: 14, name: "Tyler Miller", points: 0 },
+    { id: 15, name: "Knox Morgan", points: 0 },
+    { id: 16, name: "Micah O'Neill", points: 0 },
+    { id: 17, name: "Blake Podolinsky", points: 0 },
+    { id: 18, name: "Dylan Swancer", points: 0 },
+    { id: 19, name: "Nolan Thacker", points: 0 },
+    { id: 20, name: "Carter Todd", points: 0 },
   ]);
 
   const sortedStudents = [...students].sort((a, b) => b.points - a.points);
