@@ -26,7 +26,7 @@ function App() {
     { id: 13, name: "Brandt McGee", points: 0 },
     { id: 14, name: "Tyler Miller", points: 0 },
     { id: 15, name: "Knox Morgan", points: 0 },
-    { id: 16, name: "Micah O'Neill", points: 2 },
+    { id: 16, name: "Micah O'Neill", points: 3 },
     { id: 17, name: "Blake Podolinsky", points: 0 },
     { id: 18, name: "Dylan Swancer", points: 0 },
     { id: 19, name: "Nolan Thacker", points: 0 },
