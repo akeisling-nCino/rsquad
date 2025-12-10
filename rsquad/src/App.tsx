@@ -31,6 +31,7 @@ function App() {
     { id: 18, name: "Dylan Swancer", points: 0 },
     { id: 19, name: "Nolan Thacker", points: 0 },
     { id: 20, name: "Carter Todd", points: 0 },
+    { id: 21, name: "John Thomas Lafoon", points: 2 },
   ]);
 
   const sortedStudents = [...students].sort((a, b) => b.points - a.points);
