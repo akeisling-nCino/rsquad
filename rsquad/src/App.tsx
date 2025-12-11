@@ -12,9 +12,9 @@ interface Student {
 function App() {
   const [students] = useState<Student[]>([
     { id: 1, name: "Ivan Bogdin", points: 0 },
-    { id: 2, name: "Wesley Crews", points: 0 },
+    { id: 2, name: "Wesley Crews", points: 1 },
     { id: 3, name: "Brycen Faircloth", points: 0 },
-    { id: 4, name: "Caleb Gorham", points: 0 },
+    { id: 4, name: "Caleb Gorham", points: 1 },
     { id: 5, name: "Camden Graham", points: 0 },
     { id: 6, name: "Max Halagarda", points: 0 },
     { id: 7, name: "Shea Harper", points: 0 },
@@ -26,7 +26,7 @@ function App() {
     { id: 13, name: "Brandt McGee", points: 0 },
     { id: 14, name: "Tyler Miller", points: 0 },
     { id: 15, name: "Knox Morgan", points: 0 },
-    { id: 16, name: "Micah O'Neill", points: 3 },
+    { id: 16, name: "Micah O'Neill", points: 4 },
     { id: 17, name: "Blake Podolinsky", points: 0 },
     { id: 18, name: "Dylan Swancer", points: 0 },
     { id: 19, name: "Nolan Thacker", points: 0 },
@@ -35,6 +35,11 @@ function App() {
   ]);
 
   const sortedStudents = [...students].sort((a, b) => b.points - a.points);
+
+  // Calculate rank for each student (accounting for ties)
+  const getRank = (student: Student): number => {
+    return sortedStudents.filter((s) => s.points > student.points).length + 1;
+  };
 
   return (
     <div className="app">
@@ -71,18 +76,21 @@ function App() {
         </div>
 
         <div className="students-list">
-          {sortedStudents.map((student, index) => (
-            <div key={student.id} className={`student-card rank-${index + 1}`}>
-              <div className="rank">#{index + 1}</div>
-              <div className="student-info">
-                <h3>{student.name}</h3>
+          {sortedStudents.map((student) => {
+            const rank = getRank(student);
+            return (
+              <div key={student.id} className={`student-card rank-${rank}`}>
+                <div className="rank">#{rank}</div>
+                <div className="student-info">
+                  <h3>{student.name}</h3>
+                </div>
+                <div className="points">
+                  <span className="points-number">{student.points}</span>
+                  <span className="points-label">points</span>
+                </div>
               </div>
-              <div className="points">
-                <span className="points-number">{student.points}</span>
-                <span className="points-label">points</span>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </main>
 
